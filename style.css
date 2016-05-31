@@ -107,9 +107,9 @@ h1 {
   line-height: 1em;
   padding: 0;
   margin: 0;
+  border: 0;
 }
 .member, .member_item {
-  display: inline-block;
   position: relative;
   flex-grow: 1;
   line-height: 1em;
@@ -122,8 +122,7 @@ h1 {
   border: 0;
   padding: 0;
   margin: 0;
-  display: inline-block;
-  line-height: 1em;  
+  line-height: 1em;
 }
 .member {
   border: 0;
@@ -167,4 +166,13 @@ h1 {
 }
 .member_item {
   cursor: pointer;
+}
+.member_info {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;  
+}
+.bio a {
+  text-decoration: underline;
 }
