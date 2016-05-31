@@ -18,7 +18,7 @@ $(function() {
             var img_src = $(this).find("img").attr("src");
             $(this).closest(".member").find(".member_main .member_info").html('<img src="' + img_src + '"/>');
         } else if ($(this).data("type") == "bio") {
-            $(this).closest(".member").find(".member_main .member_info").html('<div class="bio"><div class="bio_spacer"></div>' + members[$(this).data("name")] + '</div>');
+            $(this).closest(".member").find(".member_main .member_info").html('<div class="bio"><div class="bio_spacer"></div>' + members[$(this).data("name")] + '<br/><br/></div>');
         }
     });
 
