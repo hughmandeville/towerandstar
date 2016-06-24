@@ -1,4 +1,4 @@
-var needs_resizing = true;
+var timer = null;
 
 var members = {
     "amber"   : "Hailing from middle America, Amber loves the city and the music within.  The muse is a bassy beat and she injects fuel into her veins.  We dance but it's never enough for our Amber.  Amber sings, plays flute and guitar ... and has dabbled in playing cornet.  Classically trained, she has read and felt music, but not until she  came to the city in 2008 did she create.  Current projects include fronting <a href='https://whatpreytell.bandcamp.com'>What Prey Tell</a> and running a DIY recording studio.  She’s dipped her toe into sound design for film and continues endeavoring in sound ...",
@@ -14,6 +14,11 @@ $(function() {
     }
 
     $(".member_item").on("click", function() {
+        if (timer != null) {
+            var old_timer = timer;
+            timer = null;
+            clearInterval(old_timer);
+        }
         if ($(this).data("type") == "img") {
             var img_src = $(this).find("img").attr("src");
             $(this).closest(".member").find(".member_main .member_info").html('<img src="' + img_src + '"/>');
@@ -22,20 +27,39 @@ $(function() {
         }
     });
 
+    timer = setInterval(update_random_member_image, 1000);
 });
 
 
 
-
-
-
-//setInterval(update_random_member_image, 1000);
 function update_random_member_image() {
 
-    var member_id = Math.floor((Math.random() * 4));
-    var pic_id = Math.floor((Math.random() * 3) + 1);
-    var member = members[member_id];
+    var num = Math.floor((Math.random() * 12));
+    
+    if (num == 0) {
+        $("#amber .member_info").html('<img src="images/amber_1_300x368.png"/>');
+    } else if (num == 1) {
+        $("#amber .member_info").html('<img src="images/amber_2_300x368.png"/>');
+    } else if (num == 2) {
+        $("#amber .member_info").html('<img src="images/amber_3_300x368.png"/>');    
+    } else if (num == 3) {
+        $("#anthony .member_info").html('<img src="images/anthony_1_300x368.png"/>');
+    } else if (num == 4) {
+        $("#anthony .member_info").html('<img src="images/anthony_2_300x368.png"/>');
+    } else if (num == 5) {
+        $("#anthony .member_info").html('<img src="images/anthony_3_300x368.png"/>');    
+    } else if (num == 6) {
+        $("#tanya .member_info").html('<img src="images/tanya_1_300x368.png"/>');
+    } else if (num == 7) {
+        $("#tanya .member_info").html('<img src="images/tanya_2_300x368.png"/>');
+    } else if (num == 8) {
+        $("#tanya .member_info").html('<img src="images/tanya_3_300x368.png"/>');    
+    } else if (num == 9) {
+        $("#amos .member_info").html('<img src="images/amos_1_300x368.png"/>');
+    } else if (num == 10) {
+        $("#amos .member_info").html('<img src="images/amos_2_300x368.png"/>');
+    } else if (num == 11) {
+        $("#amos .member_info").html('<img src="images/amos_3_300x368.png"/>');    
+    }
 
-    //console.log("update image for member " + member + ", pic " + pic_id);
-    $("#" + member + "_img").attr("src","images/" + member + "_" + pic_id + "_1600x1962.jpg");
 }
