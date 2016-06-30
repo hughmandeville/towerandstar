@@ -11,69 +11,64 @@
  <script src="http://code.jquery.com/jquery.min.js"></script>
  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
  <script src="code.js"></script>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link href="http://typeface.nytimes.com/css/zam5nzz.css" rel="stylesheet" property="stylesheet"/>
 </head>
 <body>
-  <div id="group_photo">
-    <img src="images/group_photo.png"/>
-    <div id="band_name">TOWER + STAR</div>
-  </div>
-  <div id="social_links">
-    <a href="https://www.facebook.com/TOWER-STAR-1090591630998601/"><img class="icon" src="images/logo_facebook.png"/></a>
-    <a href="https://www.instagram.com/tower_and_star/"><img class="icon" src="images/logo_instagram.png"/></a>
-  </div>
-  
-  <div id="members">
-    <div class="member">
-      <div class="member_main" id="amber">
-        <div class="member_info"><img src="images/amber_1_300x368.png"/></div>
-        <div class="member_name">Amber Dawn Watson</div>
-      </div>
-      <div class="member_items">
-        <div class="member_item" data-type="img"><img src="images/amber_1_300x368.png"></div>
-        <div class="member_item" data-type="img"><img src="images/amber_2_300x368.png"></div>
-        <div class="member_item" data-type="img"><img src="images/amber_3_300x368.png"></div>
-        <div class="member_item bio_label" data-type="bio" data-name="amber">Bio</div>      
+
+  <div class="boxes">
+    <div class="box">
+      <div class="title">TOWER + STAR</div>
+      <div class="subbox">
+        Come check us out at <b>The House of Yes</b> tonight at 8pm!
+      </div>      
+    </div>
+    <div class="box">
+      <div class="title">Music</div>
+      <div class="subbox">
+        <iframe id="soundcloud_player_iframe" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/notbloodpaint"></iframe>
+      </div>      
+    </div>
+    <div class="box">
+      <div class="title">Media</div>
+      <div class="subbox">
+        <img src="images/tanya_1_300x368.png">
+        <img src="images/tanya_2_300x368.png">
+        <img src="images/tanya_3_300x368.png">
       </div>
     </div>
-    <div class="member">
-      <div class="member_main" id="anthony">
-        <div class="member_name">Alain Anthony Salvo</div>
-        <div class="member_info"><img src="images/anthony_1_300x368.png"/></div>
-      </div>
-      <div class="member_items">
-        <div class="member_item" data-type="img"><img src="images/anthony_1_300x368.png"></div>
-        <div class="member_item" data-type="img"><img src="images/anthony_2_300x368.png"></div>
-        <div class="member_item" data-type="img"><img src="images/anthony_3_300x368.png"></div>
-        <div class="member_item bio_label" data-type="bio" data-name="anthony">Bio</div>      
-      </div>
-    </div>
-    <div class="member">
-      <div class="member_main" id="tanya">
-        <div class="member_name">Tanya Donovan</div>
-        <div class="member_info"><img src="images/tanya_1_300x368.png"/></div>
-      </div>
-      <div class="member_items">
-        <div class="member_item" data-type="img"><img src="images/tanya_1_300x368.png"></div>
-        <div class="member_item" data-type="img"><img src="images/tanya_2_300x368.png"></div>
-        <div class="member_item" data-type="img"><img src="images/tanya_3_300x368.png"></div>
-        <div class="member_item bio_label" data-type="bio" data-name="tanya">Bio</div>      
+    <div class="box">
+      <div class="title">Events</div>
+      <div class="subbox">
+        <div>
+          Sat 6/25 House of Yes @ 10pm
+          <div class="button"><div class="material-icons button_icon">local_play</div> <div class="button_label">tickets</div></div>
+        </div>
+        <hr/>
+        <div>
+          Tue 6/28 La Luz @ 9pm
+          <div class="button"><div class="material-icons button_icon">local_play</div> <div class="button_label">tickets</div></div>
+        </div>
       </div>
     </div>
-    <div class="member">
-      <div class="member_main" id="amos">
-        <div class="member_name">Amos Nathaniel Fisher</div>
-        <div class="member_info"><img src="images/amos_1_300x368.png"/></div>
+    <div class="box">
+      <div class="title">About</div>
+      <div class="subbox">        
+        <div>Tanya Star</div>
+        <div>Amber Star</div>
+        <div>Anthony Tower</div>
+        <div>Amos Tower</div>
       </div>
-      <div class="member_items">
-        <div class="member_item" data-type="img"><img src="images/amos_1_300x368.png"></div>
-        <div class="member_item" data-type="img"><img src="images/amos_2_300x368.png"></div>
-        <div class="member_item" data-type="img"><img src="images/amos_3_300x368.png"></div>
-        <div class="member_item bio_label" data-type="bio" data-name="amos">Bio</div>      
+    </div>
+    <div class="box">
+      <div class="title">Contact</div>
+      <div class="subbox">
+        <textarea placeholder="enter message"></textarea><br/>
+        <div class="button"><div class="material-icons button_icon">send</div> <div class="button_label">send</div></div>
       </div>
-    </div>    
+    </div>
   </div>
-    
-  <br style="clear: both"/>
-  
+
+  <br/>
 </body>
 </html>
