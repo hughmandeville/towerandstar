@@ -4,7 +4,13 @@ html, body {
   color: #ccc;
   background: #000000;
   font-family:  Arial, Helvetica, sans-serif;
-  line-height: 1em;
+}
+body {
+  background-image: url('images/towerandstar_group.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; 
 }
 img {
   margin: 0;
@@ -15,164 +21,120 @@ a {
   text-decoration: none;
 }
 
-#logo {
-  height: 30px;
-}
-
-#group_photo {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-}
-#group_photo img {
-  width: 100%;
-}
-
-#band_name {
-  position: absolute;
-  bottom: 10px;
-  margin: 0 auto;
-  font-family: 'Arial Black', 'Arial Bold', Arial;
-  font-weight: 700;
-  font-size: 10vw;
-  color: rgba(255,255,255,0.7);
-  text-align: center;
-  z-index: 2;
-  white-space: nowrap;
-  line-height: 1.1em;
-  width: 100%;
-}
-#band_name:hover {
-  color: rgba(255,255,255,0.8);
-}
-
-#social_links {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  margin: 0;
-  padding: 0;
-  text-align: right;
-  z-index: 3;
-
-}
-
-.member_name {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-family: 'Arial Black', 'Arial Bold', Arial;
+.title {
+  font-family: "arial black", "nyt-karnak-display-130124",georgia,"times new roman",times,serif;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 40px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  color: #ffffff;
-  color: rgba(255,255,255,0.7);
-  font-size: 32px;
-  line-height: 1em;
-  z-index: 0;
-  text-align: right;
 }
-.member_text {
-  margin-left: 180px;
-  margin-top: 30px;
-}
-.member_img {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-
-.bio {
-  text-align: top;
-  display: inline-block;
-  width: 400px;
-}
-.icon { 
-  height: 24px;
-  margin: 4px 4px;
-}
-
-h1 {
-  text-transform: lowercase;
-}
-
-#members, .member_items {
+.boxes {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  line-height: 1em;
-  padding: 0;
-  margin: 0;
-  border: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: center;
+  align-items: flex-start;
+  align-content: flex-start;
 }
-.member, .member_item {
-  position: relative;
+.box {
+  padding: 20px;
   flex-grow: 1;
-  line-height: 1em;
-  padding: 0;
-  margin: 0;
-}
-.member_main {
-  width: 300px;
-  height: 368px;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  line-height: 1em;
-}
-.member {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  width: 300px;
-  max-width: 300px;
-  line-height: 1em;
-}
-
-.member_item, .member_item img {
-  width: 75px;
-  height: 92px;
-  overflow-y: hidden;
-  vertical-align: center;
-  line-height: 1em;
-  padding: 0;
-  margin: 0;
-}
-
-.bio_label {
-  line-height: 92px;
-  color: #ccc;
-  background: #333;
-}
-
-.bio {
-  font-size: 20px;  
-  width: 300px;
-  max-width: 280px;
-  max-height: 368px;
-  text-align: left;
-  line-height: 1.2em;
+  flex: grow;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  min-width: 400px;
+  height: 400px;
   overflow-y: scroll;
-  padding: 0px 10px;
-  color: #999;
-  background: #333;
 }
-.bio_spacer {
-  height: 120px;
+.subbox {
+  display: none;
+  color: #fffffff;  
+  max-width: 400px;
+  line-height: 1.2em;
+  font-size: 28px;
+  font-family: "nyt-franklin", georgia, "times new roman", times, serif;
 }
-.member_item {
-  cursor: pointer;
+.box:hover .subbox {
+  display: block;
 }
-.member_info {
+.box:hover {
+  background-color: rgba(0, 0, 0, 0.6); 
+}
+.box:hover .title {
+  color: #ffffff;
+}
+
+#soundcloud_player_iframe {
+  width: 100%;
+  height: 300px;
+  border: 0px;
+}
+  
+.box img {
+  width: 120px;
+  display: inline-block;
+}
+textarea {
+  width: 100%;
+  color: #ffffff;
+  height: 240px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+}
+
+.button {
+  padding-top: 10px;
+  color: #ffffff;  
+  background: #4386fc;
+  border-radius:2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);  
+  cursor:pointer;
+  display:block;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px auto;
+  vertical-align: center;
+  width: 50%;
+}
+.button:hover {
+  background-color:#4173c9;;  
+}
+
+.button_label {  
+}
+
+.material-icons, .button_label {
+  vertical-align: top;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+hr {
   border: 0;
-  margin: 0;
-  padding: 0;
-  line-height: 1em;  
-}
-.bio a {
-  text-decoration: underline;
+  height: 1px;
+  background: #999;
+  margin: 30px 0;
 }
