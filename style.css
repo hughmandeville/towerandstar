@@ -15,14 +15,22 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.subbox a:hover {
+  text-decoration: underline;
+}
 
 .title {
   font-family: "arial black", "nyt-karnak-display-130124",georgia,"times new roman",times,serif;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 40px;
+  color: transparent;
+  font-size: 48px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+
+.social_logo {
+  max-width: 40px;
+}
+
 .boxes {
   display: flex;
   flex-direction: row;
@@ -59,11 +67,11 @@ a {
 
 .box1 {  
   background-image: url('images/tanya_rose_c_1.jpg');
-  -webkit-filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
-  -moz-filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
-  -o-filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
-  -ms-filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
-  filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
+  -webkit-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
+  -moz-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
+  -o-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
+  -ms-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
+  filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
 }
 .box2 {
   background-image: url('images/tanya_rose_c_2.jpg');
@@ -83,11 +91,11 @@ a {
 }
 .box4 {
   background-image: url('images/tanya_rose_c_4.jpg');
-  -webkit-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-  -moz-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-  -o-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-  -ms-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-  filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
+  -webkit-filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
+  -moz-filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
+  -o-filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
+  -ms-filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
+  filter: sepia(1%) saturate(1000%) hue-rotate(60deg) saturate(40%) blur(2px) brightness(150%);
 }
 .box5 {
   background-image: url('images/tanya_rose_c_5.jpg');
@@ -109,11 +117,14 @@ a {
 
 .subbox {
   display: none;
-  color: #616161;
+  color: #212121;
   max-width: 400px;
-  line-height: 1.2em;
+  line-height: 1.5em;
   font-size: 28px;
   font-family: "nyt-franklin", georgia, "times new roman", times, serif;
+  font-weight: 400;
+  //background: rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
 .box:hover .subbox {
   display: block;
@@ -134,7 +145,6 @@ a {
 }
   
 .box img {
-  width: 120px;
   display: inline-block;
 }
 
@@ -201,4 +211,32 @@ hr {
   height: 1px;
   background: #999;
   margin: 30px 0;
+}
+.bio {
+  line-height: 1.2em;
+  font-size: 20px;
+}
+
+.subbox .material-icons {
+  vertical-align: middle;
+}
+.bio_expand_collapse {
+  cursor: pointer;
+}
+.media_img {
+  width: 100px;
+}
+.person_name {
+  font-size: 24px;
+  margin: 0;
+  padding: 20px 0px 0px 0px;
+  line-height: 24px;  
+}
+.band_roles {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  line-height: 18px;
+  color: #757575;
+  padding: 0px 0px 20px 0px;
 }
