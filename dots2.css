@@ -1,0 +1,113 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: orange;
+}
+#boxes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+#nav_boxes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.box, .nav_box {
+  margin: 1px;
+  width: 60px;
+  height: 60px;
+  float: right;
+  border-radius: 30px;
+}
+
+html {
+  background: url("images/band_bg_8.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.nav_box img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#notes {
+  z-index: 10;
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  max-width: 480px;
+  //max-height: 300px;
+  font-family: 'Roboto Condensed', 'Open Sans Condensed', Verdana, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-weight: 500;
+  color: #F5F5F5;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+  //background: rgba(0,0,0,0.6);
+  padding: 20px;
+  line-height: 1.4em;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.name {
+  font-weight: 800;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+  font-size: 24px;
+  font-family: "Gibson Bold","Helvetiva","Arial";
+  cursor: pointer;
+  line-height: 1.4em;
+}
+.role {
+  font-size: 20px;
+  color: #BDBDBD;
+  font-weight: 800;
+  font-style: italic;
+}
+.text {
+  display: none;
+  font-size: 20px;
+}
+
+#content {  
+  position: relative;
+  z-index: 4;
+  margin: 0 auto;
+  padding-top: 200px;
+  width: 480px;
+  text-align: center;
+  //border: 1px solid red;
+}
+#content img {
+  z-index: 15;
+  width: 100%;
+}
+#soundcloud_player_iframe {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+}

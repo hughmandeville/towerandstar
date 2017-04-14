@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;  
+}
+
+#boxes {
+}
+.box {
+  margin: 1px;
+  background: #eeeeee;
+  width: 60px;
+  height: 60px;
+  float: left;
+  border-radius: 30px;
+}
