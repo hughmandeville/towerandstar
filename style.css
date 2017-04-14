@@ -1,11 +1,43 @@
+@font-face {
+  font-family: "Gibson Bold";
+  src: url("font_gibson_bold.ttf") format("truetype");
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  color: #616161;
-  font-family:  Arial, Helvetica, sans-serif;
+  color: #424242;
+  font-family: 'Open Sans Condensed', Verdana, Helvetica, sans-serif;
 }
-body {
+
+html {
+  background: url("images/band_bg_8.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+#page {
+  position: relative;  
+  width: 100%;
+  margin: 140px auto;
+  text-align: center;
+}
+.heading {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.78);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+  font-size: 4.2vw;
+  font-family: "Gibson Bold","Helvetiva","Arial";
+  cursor: pointer;
+  line-height: 1.4em;
+}
+.heading:hover {
+  color: orange;  
+}
+
 img {
   margin: 0;
   padding: 0;
@@ -14,231 +46,123 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.subbox a:hover {
-  text-decoration: underline;
+a:hover {
+  color: orange;
 }
 
 .title {
-  font-family: "arial black", "nyt-karnak-display-130124",georgia,"times new roman",times,serif;
-  color: transparent;
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.social_logo {
-  max-width: 40px;
-}
-
-.boxes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-flow: center;
-  align-items: flex-start;
-  align-content: flex-start;
-}
-.box {
-  width: 400px;
-  height: 400px;
-  display: block;
-  position: relative;
-  text-align: center;
-  padding: 20px;
-  flex-grow: 1;
-  flex: grow;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  overflow-y: scroll;
-}
-
-.box:after {
-  content: "";
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-  transition: 1s filter linear;
-  -webkit-transition: 0.3s -webkit-filter linear;
-  -moz-transition: 0.3s -moz-filter linear;
-  -ms-transition: 0.3s -ms-filter linear;
-  -o-transition: 0.3s -o-filter linear;
-}
-
-.box:hover:after {
-  opacity: 0.3;
-  -webkit-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-  -moz-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-  -o-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-  -ms-filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-  filter: sepia(1%) saturate(1000%) hue-rotate(240deg) saturate(40%) blur(2px) brightness(150%);
-}
-
-
-.box1:after {  
-  background-image: url('images/tanya_rose_c_1.jpg');
-}
-.box2:after {
-  background-image: url('images/tanya_rose_c_2.jpg');
-}
-.box3:after {
-  background-image: url('images/tanya_rose_c_3.jpg');
-}
-.box4:after {
-  background-image: url('images/tanya_rose_c_4.jpg');
-}
-.box5:after {
-  background-image: url('images/tanya_rose_c_5.jpg');
-}
-.box6::after {
-  background-image: url('images/tanya_rose_c_6.jpg');
-}
-
-
-.subbox {
-  display: none;
-  color: #212121;
-  line-height: 1.5em;
-  font-size: 28px;
-  font-family: "nyt-franklin", georgia, "times new roman", times, serif;
-  font-weight: 400;
-  text-align: center;
-  height: 100%;
-}
-.box:hover .subbox {
-  display: block;
-}
-
-.box:hover .title {
-  color: #616161;
-}
-
-.box:hover .overlay {
-  display: block;
-}
-
-#soundcloud_player_iframe {
-  width: 100%;
-  height: 300px;
-  border: 0px;
-}
-  
-.box img {
-  display: inline-block;
-}
-
-textarea {
-  width: 100%;
-  color: #ffffff;
-  height: 240px;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 18px;
-}
-
-.button {
-  padding-top: 10px;
-  color: #ffffff;  
-  background: #4386fc;
-  border-radius:2px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);  
-  cursor:pointer;
-  display:block;
+  font-family: 'arial bold', 'arial black', arial, sans-serif;
   font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #FFFFFF;
+  float: left;
+  margin-left: 20px;
+}
+.title_right {
+  color: #BDBDBD;
+}
+.text {
+  font-family: 'Roboto Condensed', 'Open Sans Condensed', Verdana, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 2.5vw;
+  font-weight: 500;
+  color: #F5F5F5;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  line-height: 1.4em;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.band_roles {
+  color: #BDBDBD;
+  font-weight: 800;
   text-align: center;
-  margin: 10px auto;
-  vertical-align: center;
-  width: 50%;
+  font-style: italic;
 }
-.button:hover {
-  background-color:#4173c9;;  
+.details {
+  display: none;
 }
 
-.button_label {  
+.show_img {
+  max-width: 480px;
 }
 
-.material-icons, .button_label {
-  vertical-align: top;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+#social_links {
+  -webkit-filter: grayscale(1);
+  float: right;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 5px;
 }
-.material-icons {
-  font-family: 'Material Icons';
-  
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+#social_links:hover {
+  -webkit-filter: grayscale(0);
+}
+.social_logo {
+  width: 24px;
+  padding: 0 10px;
 }
 
 hr {
   border: 0;
   height: 1px;
-  background: #999;
+  background: #E0E0E0;
   margin: 30px 0;
 }
-.bio {
-  line-height: 1.2em;
-  font-size: 20px;
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  //background: rgba(0,0,0,0.7);
+  width: 100%;
+  color: #FFFFFF;
+  padding: 10px 0;
+  z-index: 100;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+}
+.img_main {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.subbox .material-icons {
-  vertical-align: middle;
-}
-.bio_expand_collapse {
-  cursor: pointer;
-}
-.media_img {
-  width: 100px;
-}
-.person_name {
-  font-size: 24px;
-  margin: 0;
-  padding: 20px 0px 0px 0px;
-  line-height: 24px;  
-}
-.band_roles {
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
-  line-height: 18px;
-  color: #757575;
-  padding: 0px 0px 20px 0px;
-}
-.poster_medium {
-  width: 320px;
-}
-.poster_small {
-  width: 150px;
-  float: left;
-}
-
-
-@media all and (max-width: 479px) {
-  .subbox {
-	display: block;
-  }
+@media all and (max-width: 480px) {
   .title {
-	color: #616161;
+	font-size: 32px;
   }
-  .box {
-	height: 100%;
+  .title, #social_links {
+	float: none;
+	text-align: center;
+	display: block;
+	margin: 10px auto;
   }
+  .heading {
+	font-size: 6vw;
+	line-height: 1.6em;
+  }
+  .text {
+	font-size: 4.5vw;
+  }
+  #nav {
+	background: rgba(0,0,0,0.7);
+  }
+  #social_links {
+	-webkit-filter: grayscale(0);
+  }
+  .social_logo {
+	width: 32px;
+  }
+  .show_img {
+	width: 100%;
+  }
+
+}
+#soundcloud_player_iframe {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100px; 
+  width: 100%;
 }
