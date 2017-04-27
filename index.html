@@ -2,114 +2,32 @@
 <html lang="en-US">
 <head>
  <meta charset="utf-8"/>
- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
- <title>Tower + Star</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>TOWER + STAR</title>
  <meta itemprop="inLanguage" content="en" />
- <link rel="icon" type="image/png" href="images/favicon_64x64.png"/>
- <meta name="description" content="TOWER + STAR" />
- <link rel="stylesheet" type="text/css" href="style.css?updated=20170409"/>
- <script src="https://code.jquery.com/jquery.min.js"></script>
- <script src="https://connect.soundcloud.com/sdk.js"></script>
- <script src="https://w.soundcloud.com/player/api.js"></script>
- <script src="code.js"></script>
+ <link rel="stylesheet" type="text/css" href="style.css?v=2"/>
+ <script src="http://code.jquery.com/jquery.min.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+ <script src="code.js?v=2"></script>
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed" rel="stylesheet">
 </head>
 <body>
-  <div id="nav">
-    <div class="title">TOWER <span class="title_right">+ STAR</span></div>
-    <div id="social_links">
-      <a href="https://www.facebook.com/TOWER-STAR-1090591630998601/"><img class="social_logo" src="images/logo_facebook.png" title="Facebook"/></a>
-      <a href="https://www.instagram.com/tower_and_star/"><img class="social_logo" src="images/logo_instagram.png" title="Instagram"/></a>
-      <a href="https://www.pinterest.com/towerandstar/"><img class="social_logo" src="images/logo_pinterest.png" title="Pinterest"/></a>
-      <a href="https://w.soundcloud.com/player/?url=https://soundcloud.com/tanyadonovan"><img class="social_logo" src="images/logo_soundcloud.png" title="Soundcloud"/></a>
-      <a href="https://www.youtube.com/channel/UCa4PzeYqVtM4oqG0pnNABqw"><img class="social_logo" src="images/logo_youtube.png" title="YouTube"/></a>
-    </div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=312468892505982";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+  <div id="nav_boxes"></div>
+  <div id="boxes"></div>
+  <div id="notes">
+    <div class="fb-page" data-href="https://www.facebook.com/towerandstar/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="false" data-width="480" data-hide-cover="true" data-show-facepile="false" style="width: 480px;"><blockquote cite="https://www.facebook.com/towerandstar/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/towerandstar/">TOWER + STAR</a></blockquote></div>       
   </div>
-  <div id="page">
-    <div data-img="band_bg_8.jpg" class="section">
-      <div class="heading">Tower + Star</div>
-      <div class="details text">
-        TOWER + STAR is mystical, catchy, flutey, piano driven ROCK.
-The band is currently recording their first album, "We Have Hope for the Hopeless", to be released Summer of 2017. Their first single , "Regenerator" is due for release this April. 
-The bandmates are: Tanya Donovan on piano and vocals, Amber Dawn Watson on flute and backup vocals, Amos Fisher on drums, clarinet and backup vocals and Paul Alexandre Meurens on bass guitar, bass clarinet and backup vocals.
-TOWER + STAR is based in Brooklyn, NY.
-      </div>
-    </div>
 
-    <div data-img="tanya_bg_2.jpg" class="section">
-      <div class="heading">Tanya Donovan</div>
-      <div class="details text">
-        <div class="band_roles">vocals & piano</div>
-        Tanya Donovan is the visionary and  force behind TOWER + STAR and its primary singer and songwriter.
-        She has performed punk, rockabilly, prog rock and improvisational theatre. She now spends days and 
-        nights with her head inside her ancient piano, collaborating with her bandmates to create alt rock with a 
-        classical tinge; music about spirit and transformation but not without sex and shadow. She holds a 
-        Bachelors of Theatre Arts from New York University’s Tisch School of the Arts.
-      </div>
-    </div>
-
-    <div data-img="amos_bg_2.jpg" class="section">
-      <div class="heading">Amos Fisher</div>
-      <div class="details text">
-        <div class="band_roles">drums & clarinet</div>
-        Amos has been playing, writing, studying, and teaching music for twenty five years:
-        concert band, marching band, jazz band, experimental punk rock, classical music, songwriting, wordless multi-movement suites for guitar, avant-garde improvisation, fusion covers, solos of baroque and romantic classics, eastern-influenced meditation music, film and theater music, epic stage melodrama-yes, all of that!
-        He holds a Bachelor’s Degree of Music from the North Carolina School of The Arts.
-        Amos has just finished recording his debut album &quot;Anomalies&quot; &amp; completed a <a href="https://www.kickstarter.com/projects/1351321972/debut-album-anomalies-by-the-anomylos-ensemble">Kickstarter campaign to fund payroll for a virtual orchestra of musicians</a>.
-      </div>
-    </div>
-
-    <div data-img="amber_bg_2.jpg" class="section">
-      <div class="heading">Amber Dawn Watson</div>
-      <div class="details text">
-        <div class="band_roles">flute &amp; backup vocals</div>
-        Hailing from middle America, Amber loves the city and the music within.
-        The muse is a bassy beat and she injects fuel into her veins.
-        We dance but it's never enough for our Amber.
-        Amber sings, plays flute and guitar ... and has dabbled in playing cornet.
-        Classically trained, she has read and felt music, but not until she  came to the city in 2008 did she create.
-        Current projects include fronting <a href="https://whatpreytell.bandcamp.com">What Prey Tell</a> and running a DIY recording studio.
-        She’s dipped her toe into sound design for film and continues endeavoring in sound ...
-      </div>
-    </div>
-
-    <div data-img="paul_bg_2.jpg" class="section">
-      <div class="heading">Paul Alexandre Meurens</div>
-      <div class="details text">
-         <div class="band_roles">fretless electric bass &amp; bass clarinet</div>
-        Paul Alexandre Meurens has two decades of experience from the underground clubs of
-        Germany and Belgium to the hype of Brooklyn and Manhattan, playing electric bass, sax, bass 
-        clarinet, cheap toys, phone apps, ectoplasmic radios and ethnic instruments treated with 
-        electronics for multidimensional sound. Besides playing and recording with TOWER + STAR, 
-        he’s also composing, recording and co-producing the upcoming album of the legendary 
-        orchestra M'lumbo with Helmet's frontman Page Hamilton. Keeping up with the 21st Century, he 
-        also offers online gigs as a session musician and engineers, mixes and performs for various 
-        singers and instrumentalists, such as Yaelle Dray, Ludwig Persik, Golden Hands and Jarek 
-        Szczyglak.  Paul also composes his own form of ambient/meditation music.
-        <br/><br/>
-        <a href="http://soundcloud.com/paulax">paulax on soundcloud</a> | 
-        <a href="https://soundbetter.com/profiles/14371-paul-meurens">14371-paul-meurens on soundbetter</a> |
-        <a href="http://www.fiverr.com/polychoc">polychoc on fiverr</a>
-      </div>
-    </div>
-
-    <div data-img="show_pine_box_2017_04_13.jpg" class="section">
-      <div class="heading">Free Show April 13 Pine Box</div>
-      <div class="details">
-        <img class="show_img" src="images/show_pine_box_2017_04_13.jpg" alt="Pine Box April 13"/>
-      </div>
-    </div>
-
-    
-    <div data-img="band_bg_9.jpg" class="section">
-      <div class="heading">Photos</div>
-      <div class="details">
-        <a data-pin-do="embedUser" data-pin-board-width="100%" data-pin-scale-height="400" data-pin-scale-width="200" href="https://www.pinterest.com/towerandstar/"></a>
-      </div>
-    </div>
-  </div>
   <iframe id="soundcloud_player_iframe" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/tanyadonovan&auto_play=false"></iframe>
-  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 </body>
 </html>
