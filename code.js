@@ -1,6 +1,6 @@
 var audio_i = 0;
 var audio_context = null;
-
+var preloaded_images = new Array();
 
 var pages = [
     {
@@ -82,7 +82,10 @@ $(function() {
         var page = pages[i];
         var nav_box = "<div class=\"nav_box\" data-index=\"" + i + "\"><img src=\"" + page['thumb'] +
             "\" title=\"" + page['name'] + "\" alt=\"" + page['name'] + "\"/></div>";
-        $("#nav_boxes").prepend(nav_box);        
+        $("#nav_boxes").prepend(nav_box);
+        // preload the images
+        preloaded_images[i] = new Image();
+        preloaded_images[i].src = page['img'];
     }
     
     for (var i = 0; i < 600; i++) {
@@ -237,6 +240,5 @@ function get_grey()
         "rgba(255, 255, 255, 0.2)",
     ];
     return (colors[Math.floor(Math.random() * colors.length)]);
-
 }
 
