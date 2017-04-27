@@ -1,13 +1,39 @@
-@font-face {
-  font-family: "Gibson Bold";
-  src: url("font_gibson_bold.ttf") format("truetype");
-}
-
 html, body {
   margin: 0;
   padding: 0;
-  color: #424242;
-  font-family: 'Open Sans Condensed', Verdana, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: orange;
+}
+#boxes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+#nav_boxes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.box, .nav_box {
+  margin: 1px;
+  width: 60px;
+  height: 60px;
+  float: right;
+  border-radius: 30px;
 }
 
 html {
@@ -18,78 +44,72 @@ html {
   background-size: cover;
 }
 
-#page {
-  position: relative;  
-  width: 100%;
-  margin: 140px auto;
-  text-align: center;
+.nav_box img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  cursor: pointer;
 }
-.heading {
-  font-weight: 800;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.78);
+
+#notes {
+  z-index: 10;
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  max-width: 480px;
+  max-height: 60%;
+  font-family: 'Roboto Condensed', 'Open Sans Condensed', Verdana, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  font-weight: 500;
+  color: #F5F5F5;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-  font-size: 4.2vw;
+  //background: rgba(0,0,0,0.6);
+  padding: 20px;
+  line-height: 1.4em;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.name {
+  font-weight: 800;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+  font-size: 24px;
   font-family: "Gibson Bold","Helvetiva","Arial";
   cursor: pointer;
   line-height: 1.4em;
 }
-.heading:hover {
-  color: orange;  
-}
-
-img {
-  margin: 0;
-  padding: 0;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-a:hover {
-  color: orange;
-}
-
-.title {
-  font-family: 'arial bold', 'arial black', arial, sans-serif;
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #FFFFFF;
-  float: left;
-  margin-left: 20px;
-}
-.title_right {
-  color: #BDBDBD;
-}
-.text {
-  font-family: 'Roboto Condensed', 'Open Sans Condensed', Verdana, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 2.5vw;
-  font-weight: 500;
-  color: #F5F5F5;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  line-height: 1.4em;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-}
-.band_roles {
+.role {
+  font-size: 20px;
   color: #BDBDBD;
   font-weight: 800;
-  text-align: center;
   font-style: italic;
 }
-.details {
-  display: none;
+.text {
+  //display: none;
+  font-size: 20px;
 }
 
-.show_img {
-  max-width: 480px;
+#content {  
+  position: relative;
+  z-index: 4;
+  margin: 0 auto;
+  padding-top: 200px;
+  width: 480px;
+  text-align: center;
 }
-
+#content img {
+  z-index: 15;
+  width: 100%;
+}
+#soundcloud_player_iframe {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+}
 #social_links {
   -webkit-filter: grayscale(1);
   float: right;
@@ -101,68 +121,9 @@ a:hover {
   -webkit-filter: grayscale(0);
 }
 .social_logo {
-  width: 24px;
+  width: 50px;
   padding: 0 10px;
 }
-
-hr {
-  border: 0;
-  height: 1px;
-  background: #E0E0E0;
-  margin: 30px 0;
-}
-
-#nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  //background: rgba(0,0,0,0.7);
-  width: 100%;
-  color: #FFFFFF;
-  padding: 10px 0;
-  z-index: 100;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-}
-.img_main {
-  width: 100%;
-  margin: 0 auto;
-}
-
-@media all and (max-width: 480px) {
-  .title {
-	font-size: 32px;
-  }
-  .title, #social_links {
-	float: none;
-	text-align: center;
-	display: block;
-	margin: 10px auto;
-  }
-  .heading {
-	font-size: 6vw;
-	line-height: 1.6em;
-  }
-  .text {
-	font-size: 4.5vw;
-  }
-  #nav {
-	background: rgba(0,0,0,0.7);
-  }
-  #social_links {
-	-webkit-filter: grayscale(0);
-  }
-  .social_logo {
-	width: 32px;
-  }
-  .show_img {
-	width: 100%;
-  }
-
-}
-#soundcloud_player_iframe {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 100px; 
-  width: 100%;
+.poster {
+  width: 60%;
 }
