@@ -1,6 +1,7 @@
 var audio_i = 0;
 var audio_context = null;
 var preloaded_images = new Array();
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
 var pages = [
     {
@@ -149,6 +150,11 @@ $(function() {
  */
 function play_sound()
 {
+    if (!isChrome) {
+        // TODO: figure out how to make sound nice on Firefox and Safari
+        return;
+    }
+    
     var frequencies = [
         16.35, 17.32, 18.35, 19.45, 20.60, 21.83, 23.12, 24.50, 25.96, 27.50, 29.14, 30.87,
         32.70, 34.65, 36.71, 38.89, 41.20, 43.65, 46.25, 49.00, 51.91, 55.00, 58.27, 61.74,
