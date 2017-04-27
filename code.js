@@ -147,6 +147,7 @@ $(function() {
 
 /**
  * http://marcgg.com/blog/2016/11/01/javascript-audio/
+ * http://www.keithwhor.com/music/
  */
 function play_sound()
 {
