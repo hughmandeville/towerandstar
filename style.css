@@ -37,7 +37,7 @@ a:hover {
 }
 
 html {
-  background: url("images/band_bg_8.jpg") no-repeat center center fixed;
+  background: url("images/pinebox_bg_1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -70,6 +70,16 @@ html {
   text-align: left;
   overflow-y: scroll;
 }
+
+#notes #show_notes {
+  font-size: 38px;
+  line-height: 1.2em;
+}
+#notes #show_notes .address {
+  font-size: 32px;
+  color: #E0E0E0;
+}
+
 
 .name {
   font-weight: 800;
