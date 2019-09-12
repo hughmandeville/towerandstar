@@ -1,4 +1,5 @@
 var needs_resizing = true;
+var selected = null;
 
 $(function() {
     if ( ! window.console ) {
@@ -15,8 +16,19 @@ $(function() {
         needs_resizing = true;
     });
 
-    $("#links").on("click", function() {
-	    $("#social").toggle();
+    $(".item").on("click", function() {
+        if (selected != null) {
+            $("#links_" + selected).hide();
+        }
+        var new_selected = $(this).text();
+        if (new_selected == selected) {
+            selected = null;
+        } else {
+            selected = new_selected;
+            if (selected != null) {
+                $("#links_" + selected).show();
+            }
+        }
     });
 });
 
