@@ -13,13 +13,6 @@ a:hover {
   color: orange;
 }
 
-.social_logo {
-  -webkit-filter: grayscale(1);
-}
-.social_logo:hover {
-  -webkit-filter: grayscale(0);
-}
-
 #video_div {
   position: fixed;
   width: 100%;
@@ -57,59 +50,75 @@ a:hover {
   left: 20px;
   font-size: 28px;
 }
-#social {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  text-align: right;
+.link_icon  {
+	padding: 0;
+	margin-right: 10px;
+	height: 60px;
+	width: 60px;
+	display: inline-block;
 }
-#social .social_logo {
-  height: 28px;
-  padding: 0 10px;
+.link_icon img  {
+	height: 60px;
+	width: 60px;
+}
+.link_text {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	line-height: 60px;
+	vertical-align: top;
 }
 
-#links i {
-  position: absolute;
-  font-size: 32px;
-  top: 10px;
-  right: 20px;
+#links_shows, #links_social, #links_songs, #links_swag {
+	display: none;
+}
+.links {
+  position: fixed;
+  font-size: 22px;
+  top: 50px;
+  right: 0px;
   cursor: pointer;
+  z-index: 100;
+  width: 280px;
+  background: #212121;
+  padding: 0;
+  margin: 0;
 }
-#links i:hover {
-  color: orange;
+.link {
+	display: block;
+	height: 60px;
+	width: 280px;
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid #424242;
+}
+.link:hover {
+	background: #424242;
 }
 
-
+#items {
+	position: fixed;
+	display: inline-block;
+	right: 20px;
+	top: 12px;
+	font-size: 20px;
+}
+.item {
+	display: inline-block;
+}
+.item:hover {
+	color: orange;
+	cursor: pointer;
+}
 
 @media all and (max-width: 500px) {
-  #social {
-    display: none;
-    top: 50px;
-    right: 0;
-    background: #000000;
-    padding: 20px;
-    z-index: 10;
-    border-left: 1px solid #333;
-    border-bottom: 1px solid #333;
-  }
-  #social a {
-    display: block;
-  }
-  #social .social_logo {
-    -webkit-filter: grayscale(0);
-    margin-top: 10px;
-    height: 40px;
-  }
-  #links {
-    display: block;
-  }
+	#title {
+		font-size: 24px;
+	}
 }
+
 @media all and (min-width: 501px) {
-  #social {
-    display: block;
-  }
-  #links {
-    display: none;
-  }
+	#title {
+		font-size: 28px;
+	}
 }
