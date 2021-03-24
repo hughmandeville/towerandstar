@@ -2,11 +2,19 @@ var needs_resizing = true;
 var selected = null;
 
 $(function () {
+  $(".links").hide();
   if (!window.console) {
     console = { log: function () {} };
   }
   // YouTube IDs
-  const ytIDs = ["0pSCxHU3t54", "E_bcANrhy9c", "pKX3wbSKxF8", "Y3MSQkm3PXY"];
+  const ytIDs = [
+    "0pSCxHU3t54",
+    "6Wo_gshZGmQ",
+    "BXioJ1NZaJo",
+    "E_bcANrhy9c",
+    "pKX3wbSKxF8",
+    "Y3MSQkm3PXY",
+  ];
   var rand = Math.floor(Math.random() * ytIDs.length);
   $("#video_iframe").attr(
     "src",

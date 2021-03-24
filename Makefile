@@ -7,7 +7,8 @@ help:
 install:
 	scp code.js tanyadonovan@towerandstar.com:/home/tanyadonovan/public_html/
 	scp index.html tanyadonovan@towerandstar.com:/home/tanyadonovan/public_html/
-	scp images/song_triptych.jpg tanyadonovan@towerandstar.com:/home/tanyadonovan/public_html/images/
+	scp style.css tanyadonovan@towerandstar.com:/home/tanyadonovan/public_html/
+	# scp images/song_triptych.jpg tanyadonovan@towerandstar.com:/home/tanyadonovan/public_html/images/
 
 run_local:
 	@echo "http://localhost:8080/"
